@@ -4,6 +4,11 @@ const HeroSection: React.FC = () => {
   return (
     <section className="flex flex-col items-center px-4 md:px-36 min-h-svh md:flex-row-reverse md:justify-between">
       <div className="relative mt-4 md:mt-0">
+        <div>
+          <h1 className="text-6xl md:text-6xl font-bold md:hidden text-primary mt-8 mb-16">
+            Good Food Us <br /> Good Mood
+          </h1>
+        </div>
         <img
           src="/green-salad.png"
           alt="Green Salad Tomato"
@@ -29,7 +34,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       <div className="max-w-md md:text-left">
-        <h1 className="text-4xl md:text-6xl font-bold text-primary mt-8 md:mt-0">
+        <h1 className="hidden md:block text-4xl md:text-6xl font-bold text-primary mt-8 md:mt-0">
           Good Food Us <br /> Good Mood
         </h1>
         <p className="text-[#757575] mt-4 font-medium text-base md:text-lg">
