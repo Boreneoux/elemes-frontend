@@ -21,10 +21,10 @@ const Home: NextPage = () => {
         <CategoryBrowser />
       </div>
       <TrendingCategory />
-      <div className="md:px-32 rounded-lg">
+      <div className="hidden md:flex md:px-32 rounded-lg">
         <Footer />
       </div>
-      <div className="my-12 pt-8 text-center text-sm text-gray-500">
+      <div className="hidden md:block my-12 pt-8 text-center text-sm text-gray-500">
         © 2021 ELEMES ID. ALL RIGHTS RESERVED
       </div>
     </div>
