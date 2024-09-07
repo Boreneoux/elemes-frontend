@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
     <>
       <header className="flex justify-between items-center py-4 px-8 lg:px-32 bg-transparent">
         <a href="#">
-          <img src="/elemes_logo.png" alt="Elemes Logo" className="w-24" />
+          <img src="/elemes_logo.png" alt="Elemes Logo" className="w-48" />
         </a>
 
         <nav className="hidden lg:flex">
@@ -70,7 +70,6 @@ const Navbar: React.FC = () => {
         </button>
       </header>
 
-      {/* Mobile bottom navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white shadow-lg lg:hidden">
         <ul className="flex justify-around py-2">
           <li>
@@ -100,7 +99,6 @@ const Navbar: React.FC = () => {
         </ul>
       </nav>
 
-      {/* Mobile menu with transition */}
       <div
         className={`fixed inset-0 bg-white z-40 lg:hidden transition-opacity duration-300 ease-in-out ${
           isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
