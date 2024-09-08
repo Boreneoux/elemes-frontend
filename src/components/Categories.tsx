@@ -94,7 +94,7 @@ const CategoryBrowser: React.FC = () => {
       </h3>
       <div className="flex justify-between items-center mb-4 px-4 sm:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full">
-          {categories.map((category, index) => (
+          {categories.map(category => (
             <CategoryCard key={category.name} {...category} />
           ))}
         </div>
