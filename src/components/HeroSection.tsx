@@ -9,12 +9,17 @@ const HeroSection: React.FC = () => {
             Good Food Us <br /> Good Mood
           </h1>
         </div>
-        <img
-          src="/green-salad.png"
-          alt="Green Salad Tomato"
-          className="w-full w- md:w-102 rounded-lg"
-        />
-        <div className="absolute bottom-1 left-1 right-1 bg-white bg-opacity-50 backdrop-blur-md p-4 rounded-lg shadow-lg flex flex-col lg:flex-row">
+        <div className="relative">
+          <div className="absolute inset-0 bg-[#F0F0F0] rounded-full transform scale-125 z-0"></div>
+          <div className="relative z-10">
+            <img
+              src="/green-salad.png"
+              alt="Green Salad Tomato"
+              className="w-full md:w-102 rounded-full"
+            />
+          </div>
+        </div>
+        <div className="absolute -bottom-4 right-1 md:-bottom-8 md:-left-6 bg-white bg-opacity-50 backdrop-blur-md p-4 rounded-lg shadow-lg flex flex-col lg:flex-row max-w-fit z-20">
           <img
             src="/green-salad-sm.png"
             alt="Green Salad Tomato"
@@ -37,7 +42,7 @@ const HeroSection: React.FC = () => {
         <h1 className="hidden md:block text-4xl md:text-6xl font-bold text-primary mt-8 md:mt-0">
           Good Food Us <br /> Good Mood
         </h1>
-        <p className="text-[#757575] mt-4 font-medium text-base md:text-lg">
+        <p className="text-[#757575] mt-16 font-medium text-base md:text-lg">
           I would think that conserving our natural resources should be a
           conservative position: Not to waste food, and not to throw away a lot
           of the food that we buy.

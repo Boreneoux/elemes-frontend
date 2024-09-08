@@ -94,9 +94,9 @@ const TrendingCategoryCard: React.FC<TrendingCategoryItem> = ({
   backgroundColor
 }) => (
   <div
-    className="p-4 rounded-lg text-start relative transition-all duration-300 ease-in-out transform hover:scale-105 shadow-md"
+    className="p-4 rounded-lg text-start relative transition-all duration-300 ease-in-out transform hover:scale-105 shadow-md flex items-center"
     style={{ backgroundColor }}>
-    <div className="mb-2 flex justify-start">
+    <div className="mr-4 flex-shrink-0">
       <Image
         src={image}
         alt={name}
@@ -105,9 +105,11 @@ const TrendingCategoryCard: React.FC<TrendingCategoryItem> = ({
         className="rounded-md"
       />
     </div>
-    <div className="font-semibold">{name}</div>
-    <div className="text-sm text-gray-600">{category}</div>
-    <StarRating rating={rating} />
+    <div>
+      <div className="font-semibold">{name}</div>
+      <div className="text-sm text-gray-600">{category}</div>
+      <StarRating rating={rating} />
+    </div>
   </div>
 );
 
@@ -121,14 +123,12 @@ const TrendingCategory: React.FC = () => {
         Receipt
       </h3>
 
-      {/* Cards Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8 px-4 sm:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8 px-4 sm:px-16">
         {trendingCategories.map(category => (
           <TrendingCategoryCard key={category.name} {...category} />
         ))}
       </div>
 
-      {/* All Receipt Button */}
       <div className="flex justify-center">
         <button className="bg-primary text-white px-6 py-2 rounded-full text-lg">
           ALL Receipt
